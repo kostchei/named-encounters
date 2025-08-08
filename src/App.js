@@ -109,7 +109,6 @@ function App() {
             <tr>
               <th>Creature</th>
               <th>Name</th>
-              <th>Type/Role</th>
               <th>CR</th>
               <th>Theme</th>
               <th>Naming Style</th>
@@ -127,13 +126,6 @@ function App() {
                    'Unknown'}
                 </td>
                 <td className="display-name">{monster.displayName}</td>
-                <td>
-                  {monster.role && <span className={`role ${monster.role}`}>{monster.role}</span>}
-                  {monster.type && <span className="type">{monster.type}</span>}
-                  {monster.Type && <span className="type">{monster.Type}</span>}
-                  {monster.type === 'pair' && <span className="detail">Mounted</span>}
-                  {monster.type === 'dismounted' && <span className="detail">Dismounted</span>}
-                </td>
                 <td>
                   {monster.CR || 
                    (monster.mountCR && monster.riderCR ? `${monster.mountCR}/${monster.riderCR}` : '') ||

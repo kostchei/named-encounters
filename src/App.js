@@ -107,8 +107,8 @@ function App() {
         <table className="monster-table">
           <thead>
             <tr>
+              <th>Creature</th>
               <th>Name</th>
-              <th>Display Name</th>
               <th>Type/Role</th>
               <th>CR</th>
               <th>Theme</th>

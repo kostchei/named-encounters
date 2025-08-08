@@ -114,7 +114,6 @@ function App() {
               <th>Theme</th>
               <th>Naming Style</th>
               <th>Traits</th>
-              <th>Details</th>
             </tr>
           </thead>
           <tbody>
@@ -132,6 +131,8 @@ function App() {
                   {monster.role && <span className={`role ${monster.role}`}>{monster.role}</span>}
                   {monster.type && <span className="type">{monster.type}</span>}
                   {monster.Type && <span className="type">{monster.Type}</span>}
+                  {monster.type === 'pair' && <span className="detail">Mounted</span>}
+                  {monster.type === 'dismounted' && <span className="detail">Dismounted</span>}
                 </td>
                 <td>
                   {monster.CR || 
@@ -156,14 +157,6 @@ function App() {
                   {monster.traits && monster.traits.length > 0 ? 
                     monster.traits.join(', ') : 
                     'None'}
-                </td>
-                <td>
-                  {monster.type === 'pair' && 'Mounted'}
-                  {monster.type === 'dismounted' && 'Dismounted'}
-                  {monster.role === 'leader' && 'Group Leader'}
-                  {monster.role === 'minion' && 'Minion'}
-                  {monster.role === 'elite' && 'Elite'}
-                  {monster.role === 'support' && 'Support'}
                 </td>
               </tr>
             ))}

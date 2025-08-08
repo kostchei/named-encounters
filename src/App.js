@@ -195,7 +195,6 @@ function App() {
         
         {encounter.tarotMotivation && (
           <div className="tarot-motivation-section">
-            <h4>Encounter Tarot Reading</h4>
             <div className="tarot-card">
               <h5>{encounter.tarotMotivation.card} [{encounter.tarotMotivation.orientation}]</h5>
               <p className="tarot-description">{encounter.tarotMotivation.description}</p>

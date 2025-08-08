@@ -18,6 +18,11 @@
 .env.test.local
 .env.production.local
 
+# Azure deployment configuration (contains sensitive info)
+azure-config.txt
+azure-*.txt
+deployment-*.txt
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

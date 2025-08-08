@@ -1,0 +1,82 @@
+[
+  {
+    "category": "Territorial",
+    "motivations": [
+      "The creatures are defending their lair from intruders",
+      "The monsters have claimed this area as their hunting grounds",
+      "These beings are protecting their young or eggs",
+      "The creatures see the party as a threat to their dominance",
+      "The monsters are guarding a valuable resource or territory"
+    ]
+  },
+  {
+    "category": "Hunger",
+    "motivations": [
+      "The creatures haven't fed in days and are desperate",
+      "The monsters are drawn by the scent of fresh blood",
+      "These beings feed on specific energy or emotions the party radiates",
+      "The creatures are hunting to feed their offspring",
+      "The monsters are competing with each other for the right to feast"
+    ]
+  },
+  {
+    "category": "Treasure",
+    "motivations": [
+      "The creatures have spotted valuable equipment the party carries",
+      "The monsters are following rumors of treasure in the area",
+      "These beings are drawn to magical items in the party's possession",
+      "The creatures seek to reclaim stolen treasure",
+      "The monsters are hired or compelled to retrieve specific items"
+    ]
+  },
+  {
+    "category": "Vengeance",
+    "motivations": [
+      "The party has wronged these creatures or their allies before",
+      "The monsters seek revenge for fallen kin",
+      "These beings were hired to settle a score",
+      "The creatures blame the party for some past tragedy",
+      "The monsters are fulfilling a blood oath of vengeance"
+    ]
+  },
+  {
+    "category": "Orders",
+    "motivations": [
+      "The creatures are following orders from a more powerful master",
+      "The monsters are bound by ancient pacts or curses",
+      "These beings are compelled by magical domination",
+      "The creatures are fulfilling a religious or cult mandate",
+      "The monsters are carrying out the will of their deity"
+    ]
+  },
+  {
+    "category": "Curiosity",
+    "motivations": [
+      "The creatures are investigating strange sounds or lights",
+      "The monsters are drawn by unusual magical signatures",
+      "These beings are studying the party's behavior",
+      "The creatures are following orders to gather intelligence",
+      "The monsters are naturally curious about these intruders"
+    ]
+  },
+  {
+    "category": "Madness",
+    "motivations": [
+      "The creatures have been driven insane by eldritch influences",
+      "The monsters are in a frenzy due to disease or poison",
+      "These beings attack randomly due to magical corruption",
+      "The creatures are consumed by an unnatural rage",
+      "The monsters have lost all reason to primal instincts"
+    ]
+  },
+  {
+    "category": "Survival",
+    "motivations": [
+      "The creatures are fleeing from a greater threat and strike out in fear",
+      "The monsters are wounded and desperate",
+      "These beings are trapped and fighting for escape",
+      "The creatures are protecting the last of their kind",
+      "The monsters are making a final stand against extinction"
+    ]
+  }
+]

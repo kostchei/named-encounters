@@ -1,38 +1,504 @@
-.App {
+/* D&D Named Encounters Generator Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Header */
+.app-header {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 3px solid #8B4513;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  color: #FFD700;
+}
+
+.app-header p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Main Content */
+.main-content {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
+
+/* Generator Section */
+.generator-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+.generator-section h2 {
+  margin-top: 0;
+  color: #8B4513;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 0.5rem;
+}
+
+.config-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.party-line {
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #6c757d;
+}
+
+.config-row label, .party-line label {
+  font-weight: 600;
+  color: #555;
+  min-width: 80px;
+  white-space: nowrap;
+}
+
+select {
+  padding: 0.4rem 0.6rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+select:focus {
+  outline: none;
+  border-color: #FFD700;
+}
+
+.current-difficulty {
+  background: #e8f5e8;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border-left: 4px solid #28a745;
+  margin: 1rem 0;
+}
+
+.xp-budget {
+  background: #fff3cd;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #FFD700;
+  margin: 1.5rem 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.xp-budget h3 {
+  margin: 0;
+  color: #8B4513;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Buttons */
+.add-line-btn, .generate-btn, .save-btn, .clear-all-btn {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.add-line-btn {
+  background: #6c757d;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.add-line-btn:hover {
+  background: #5a6268;
+}
+
+.generate-btn {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #8B4513;
+  font-size: 1.1rem;
+  width: 100%;
+  margin-top: 1rem;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.generate-btn:hover {
+  background: linear-gradient(135deg, #FFA500, #FF8C00);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+.save-btn {
+  background: #28a745;
+  color: white;
+  margin-top: 1rem;
+}
+
+.save-btn:hover {
+  background: #218838;
+}
+
+.clear-all-btn {
+  background: #dc3545;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.clear-all-btn:hover {
+  background: #c82333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Encounters Section */
+.encounters-section {
+  min-width: 0;
+}
+
+.current-encounter {
+  margin-bottom: 2rem;
+}
+
+.current-encounter h2 {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.saved-encounters h2 {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.saved-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Encounter Cards */
+.encounter-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.encounter-card.current {
+  border: 3px solid #FFD700;
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2);
+}
+
+.encounter-card.error {
+  border: 3px solid #dc3545;
+  background: #f8d7da;
+}
+
+.encounter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.encounter-header h3 {
+  margin: 0;
+  color: #8B4513;
+  font-size: 1.4rem;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+
+.encounter-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.encounter-stats span {
+  background: #e9ecef;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #495057;
+  font-weight: 500;
+}
+
+/* Motivation Section */
+.motivation-section {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.motivation-section h4 {
+  margin: 0 0 0.5rem 0;
+  color: #8B4513;
+  font-size: 1.1rem;
+}
+
+.motivation-category {
+  background: #FFD700;
+  color: #8B4513;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.motivation-description {
+  margin: 0;
+  font-style: italic;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Tarot motivation styling */
+.tarot-motivation-section {
+  background: linear-gradient(135deg, #2c1810, #4a2c1b);
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #f0e6d2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tarot-motivation-section h4 {
+  margin: 0 0 1rem 0;
+  color: #d4af37;
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+.tarot-card {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tarot-card h5 {
+  margin: 0 0 0.5rem 0;
+  color: #d4af37;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tarot-description {
+  font-style: italic;
+  line-height: 1.4;
+  color: #e6d3b7;
+  margin: 0;
+}
+
+.tarot-meanings {
+  margin-top: 1rem;
+}
+
+.tarot-meaning {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.75rem;
+  border-radius: 6px;
+  border-left: 3px solid #d4af37;
+  line-height: 1.3;
+}
+
+.tarot-meaning strong {
+  color: #d4af37;
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/* Monster traits styling */
+.monster-traits {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #666;
+  max-width: 120px;
+}
+
+/* Monster Table */
+.monster-table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.monster-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.monster-table th {
+  background: #8B4513;
+  color: white;
+  padding: 0.8rem 0.6rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.monster-table td {
+  padding: 0.8rem 0.6rem;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: top;
+}
+
+.monster-table tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.monster-table tbody tr:hover {
+  background: #e8f4fd;
+}
+
+.display-name {
+  font-weight: 600;
+  color: #8B4513;
+}
+
+.role, .type {
+  display: inline-block;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0.1rem;
+}
+
+.role.leader {
+  background: #dc3545;
+  color: white;
+}
+
+.role.minion {
+  background: #6c757d;
+  color: white;
+}
+
+.type {
+  background: #17a2b8;
+  color: white;
+}
+
+/* Grid Layout for Saved Encounters */
+.encounters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .encounters-grid {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .party-line {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    text-align: left;
   }
+  
+  .party-line label {
+    min-width: auto;
+    margin-bottom: 0.25rem;
+  }
+  
+  .monster-table {
+    font-size: 0.8rem;
+  }
+  
+  .monster-table th,
+  .monster-table td {
+    padding: 0.5rem 0.4rem;
+  }
+}
+
+.no-encounters {
+  color: white;
+  text-align: center;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
 }

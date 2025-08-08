@@ -7,9 +7,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
   min-height: 100vh;
-  color: #333;
+  color: #f7fafc;
 }
 
 .app {
@@ -19,18 +19,18 @@ body {
 
 /* Header */
 .app-header {
-  background: rgba(0, 0, 0, 0.2);
-  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  color: #f7fafc;
   text-align: center;
   padding: 2rem 1rem;
-  border-bottom: 3px solid #8B4513;
+  border-bottom: 3px solid #ed8936;
 }
 
 .app-header h1 {
   margin: 0;
   font-size: 2.5rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-  color: #FFD700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  color: #ed8936;
 }
 
 .app-header p {
@@ -58,12 +58,11 @@ body {
 
 /* Generator Section */
 .generator-section {
-  background: rgba(255, 255, 255, 0.95);
+  background: #f7fafc;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid #2d3748;
   height: fit-content;
   position: sticky;
   top: 2rem;
@@ -71,8 +70,8 @@ body {
 
 .generator-section h2 {
   margin-top: 0;
-  color: #8B4513;
-  border-bottom: 2px solid #FFD700;
+  color: #1a202c;
+  border-bottom: 2px solid #ed8936;
   padding-bottom: 0.5rem;
 }
 
@@ -92,52 +91,54 @@ body {
   align-items: center;
   margin-bottom: 1rem;
   padding: 0.75rem;
-  background: #f8f9fa;
+  background: #edf2f7;
   border-radius: 6px;
-  border-left: 4px solid #6c757d;
+  border-left: 4px solid #ed8936;
 }
 
 .config-row label, .party-line label {
   font-weight: 600;
-  color: #555;
+  color: #1a202c;
   min-width: 80px;
   white-space: nowrap;
 }
 
 select {
   padding: 0.4rem 0.6rem;
-  border: 2px solid #ddd;
+  border: 2px solid #2d3748;
   border-radius: 6px;
   font-size: 0.9rem;
   background: white;
+  color: #1a202c;
   transition: border-color 0.2s;
 }
 
 select:focus {
   outline: none;
-  border-color: #FFD700;
+  border-color: #ed8936;
 }
 
 .current-difficulty {
-  background: #e8f5e8;
+  background: #edf2f7;
   padding: 0.8rem;
   border-radius: 6px;
-  border-left: 4px solid #28a745;
+  border-left: 4px solid #ed8936;
   margin: 1rem 0;
+  color: #1a202c;
 }
 
 .xp-budget {
-  background: #fff3cd;
+  background: #edf2f7;
   padding: 1rem;
   border-radius: 6px;
-  border-left: 4px solid #FFD700;
+  border-left: 4px solid #ed8936;
   margin: 1.5rem 0;
   text-align: center;
 }
 
 .xp-budget h3 {
   margin: 0;
-  color: #8B4513;
+  color: #1a202c;
 }
 
 /* Buttons */
@@ -152,47 +153,47 @@ select:focus {
 }
 
 .add-line-btn {
-  background: #6c757d;
-  color: white;
+  background: #2d3748;
+  color: #f7fafc;
   margin-bottom: 1rem;
 }
 
 .add-line-btn:hover {
-  background: #5a6268;
+  background: #1a202c;
 }
 
 .generate-btn {
-  background: linear-gradient(135deg, #FFD700, #FFA500);
-  color: #8B4513;
+  background: #ed8936;
+  color: #f7fafc;
   font-size: 1.1rem;
   width: 100%;
   margin-top: 1rem;
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(237, 137, 54, 0.3);
 }
 
 .generate-btn:hover {
-  background: linear-gradient(135deg, #FFA500, #FF8C00);
+  background: #dd7a2b;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(237, 137, 54, 0.4);
 }
 
 .save-btn {
-  background: #28a745;
-  color: white;
+  background: #ed8936;
+  color: #f7fafc;
   margin-top: 1rem;
 }
 
 .save-btn:hover {
-  background: #218838;
+  background: #dd7a2b;
 }
 
 .clear-all-btn {
-  background: #dc3545;
-  color: white;
+  background: #2d3748;
+  color: #f7fafc;
 }
 
 .clear-all-btn:hover {
-  background: #c82333;
+  background: #1a202c;
 }
 
 /* Encounters Section */
@@ -205,13 +206,13 @@ select:focus {
 }
 
 .current-encounter h2 {
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  color: #f7fafc;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
 .saved-encounters h2 {
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  color: #f7fafc;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
 .saved-header {
@@ -225,23 +226,22 @@ select:focus {
 
 /* Encounter Cards */
 .encounter-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: #f7fafc;
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid #2d3748;
 }
 
 .encounter-card.current {
-  border: 3px solid #FFD700;
-  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2);
+  border: 3px solid #ed8936;
+  box-shadow: 0 8px 32px rgba(237, 137, 54, 0.3);
 }
 
 .encounter-card.error {
-  border: 3px solid #dc3545;
-  background: #f8d7da;
+  border: 3px solid #2d3748;
+  background: #edf2f7;
 }
 
 .encounter-header {
@@ -253,13 +253,13 @@ select:focus {
 
 .encounter-header h3 {
   margin: 0;
-  color: #8B4513;
+  color: #1a202c;
   font-size: 1.4rem;
 }
 
 .delete-btn {
-  background: #dc3545;
-  color: white;
+  background: #2d3748;
+  color: #f7fafc;
   border: none;
   border-radius: 50%;
   width: 30px;
@@ -273,7 +273,7 @@ select:focus {
 }
 
 .delete-btn:hover {
-  background: #c82333;
+  background: #1a202c;
   transform: scale(1.1);
 }
 
@@ -285,18 +285,18 @@ select:focus {
 }
 
 .encounter-stats span {
-  background: #e9ecef;
+  background: #edf2f7;
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
   font-size: 0.85rem;
-  color: #495057;
+  color: #1a202c;
   font-weight: 500;
 }
 
 /* Motivation Section */
 .motivation-section {
-  background: #f8f9fa;
-  border: 1px solid #dee2e6;
+  background: #edf2f7;
+  border: 1px solid #2d3748;
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1.5rem;
@@ -304,13 +304,13 @@ select:focus {
 
 .motivation-section h4 {
   margin: 0 0 0.5rem 0;
-  color: #8B4513;
+  color: #1a202c;
   font-size: 1.1rem;
 }
 
 .motivation-category {
-  background: #FFD700;
-  color: #8B4513;
+  background: #ed8936;
+  color: #f7fafc;
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
   font-weight: 600;
@@ -322,32 +322,32 @@ select:focus {
 .motivation-description {
   margin: 0;
   font-style: italic;
-  color: #555;
+  color: #2d3748;
   line-height: 1.4;
 }
 
 /* Tarot motivation styling */
 .tarot-motivation-section {
-  background: linear-gradient(135deg, #2c1810, #4a2c1b);
-  border: 2px solid #d4af37;
+  background: linear-gradient(135deg, #1a202c, #2d3748);
+  border: 2px solid #ed8936;
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #f0e6d2;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: #f7fafc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .tarot-motivation-section h4 {
   margin: 0 0 1rem 0;
-  color: #d4af37;
+  color: #ed8936;
   font-size: 1.3rem;
   text-align: center;
   font-family: 'Georgia', serif;
 }
 
 .tarot-card {
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid #d4af37;
+  background: rgba(237, 137, 54, 0.1);
+  border: 1px solid #ed8936;
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -356,7 +356,7 @@ select:focus {
 
 .tarot-card h5 {
   margin: 0 0 0.5rem 0;
-  color: #d4af37;
+  color: #ed8936;
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -366,7 +366,7 @@ select:focus {
 .tarot-description {
   font-style: italic;
   line-height: 1.4;
-  color: #e6d3b7;
+  color: #edf2f7;
   margin: 0;
 }
 
@@ -375,15 +375,15 @@ select:focus {
 }
 
 .tarot-meaning {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   padding: 0.75rem;
   border-radius: 6px;
-  border-left: 3px solid #d4af37;
+  border-left: 3px solid #ed8936;
   line-height: 1.3;
 }
 
 .tarot-meaning strong {
-  color: #d4af37;
+  color: #ed8936;
   display: block;
   margin-bottom: 0.25rem;
   font-size: 0.9rem;
@@ -393,7 +393,7 @@ select:focus {
 .monster-traits {
   font-size: 0.85rem;
   font-style: italic;
-  color: #666;
+  color: #2d3748;
   max-width: 120px;
 }
 
@@ -401,7 +401,7 @@ select:focus {
 .monster-table-container {
   overflow-x: auto;
   border-radius: 8px;
-  border: 1px solid #dee2e6;
+  border: 1px solid #2d3748;
 }
 
 .monster-table {
@@ -411,8 +411,8 @@ select:focus {
 }
 
 .monster-table th {
-  background: #8B4513;
-  color: white;
+  background: #1a202c;
+  color: #f7fafc;
   padding: 0.8rem 0.6rem;
   text-align: left;
   font-weight: 600;
@@ -420,21 +420,22 @@ select:focus {
 
 .monster-table td {
   padding: 0.8rem 0.6rem;
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid #2d3748;
   vertical-align: top;
+  color: #1a202c;
 }
 
 .monster-table tbody tr:nth-child(even) {
-  background: #f8f9fa;
+  background: #edf2f7;
 }
 
 .monster-table tbody tr:hover {
-  background: #e8f4fd;
+  background: rgba(237, 137, 54, 0.1);
 }
 
 .display-name {
   font-weight: 600;
-  color: #8B4513;
+  color: #ed8936;
 }
 
 .role, .type {
@@ -447,18 +448,18 @@ select:focus {
 }
 
 .role.leader {
-  background: #dc3545;
-  color: white;
+  background: #ed8936;
+  color: #f7fafc;
 }
 
 .role.minion {
-  background: #6c757d;
-  color: white;
+  background: #2d3748;
+  color: #f7fafc;
 }
 
 .type {
-  background: #17a2b8;
-  color: white;
+  background: #1a202c;
+  color: #f7fafc;
 }
 
 /* Grid Layout for Saved Encounters */
@@ -495,11 +496,11 @@ select:focus {
 }
 
 .no-encounters {
-  color: white;
+  color: #f7fafc;
   text-align: center;
   font-style: italic;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(45, 55, 72, 0.3);
   padding: 2rem;
   border-radius: 8px;
-  backdrop-filter: blur(5px);
+  border: 1px solid #2d3748;
 }

@@ -402,13 +402,25 @@ select:focus {
   overflow-x: auto;
   border-radius: 8px;
   border: 1px solid #2d3748;
+  margin-top: 1rem;
 }
 
 .monster-table {
   width: 100%;
+  min-width: 1000px;
   border-collapse: collapse;
   font-size: 0.9rem;
+  table-layout: fixed;
 }
+
+.monster-table th:nth-child(1) { width: 140px; } /* Name (creature) */
+.monster-table th:nth-child(2) { width: 160px; } /* Display Name */
+.monster-table th:nth-child(3) { width: 100px; } /* Type/Role */
+.monster-table th:nth-child(4) { width: 60px; }  /* CR */
+.monster-table th:nth-child(5) { width: 100px; } /* Theme */
+.monster-table th:nth-child(6) { width: 120px; } /* Naming Style */
+.monster-table th:nth-child(7) { width: 140px; } /* Traits */
+.monster-table th:nth-child(8) { width: 120px; } /* Details */
 
 .monster-table th {
   background: #1a202c;
@@ -416,13 +428,37 @@ select:focus {
   padding: 0.8rem 0.6rem;
   text-align: left;
   font-weight: 600;
+  white-space: nowrap;
+  border-right: 1px solid #2d3748;
+}
+
+.monster-table th:last-child {
+  border-right: none;
 }
 
 .monster-table td {
   padding: 0.8rem 0.6rem;
   border-bottom: 1px solid #2d3748;
+  border-right: 1px solid #edf2f7;
   vertical-align: top;
   color: #1a202c;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.monster-table td:last-child {
+  border-right: none;
+}
+
+/* Specific cell styling */
+.monster-table td:nth-child(1) { /* Name (creature) */
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.monster-table td:nth-child(4) { /* CR */
+  text-align: center;
+  font-weight: 600;
 }
 
 .monster-table tbody tr:nth-child(even) {
